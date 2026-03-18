@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wage Theft Project</title>
+
+  <link rel="stylesheet" href="./wage_theft.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="wage-theft-page">
+    <header class="wt-header">
+      <img src="./logo.png" alt="Project Logo" class="wt-logo" />
+      <h1 class="wt-title">Tracking Every Dollar: New York's Wage Theft Crisis</h1>
+      <p class="wt-subtitle">
+        An interactive exhibit visualizing the scale of wage theft in the state of New York
+      </p>
+    </header>
+
+    <main class="wt-container">
+    <section class="wt-section">
+        <div class="wt-section-heading">
+        <h2>You Cashed a Stolen Check!</h2>
+        </div>
+        <div id="caseCard" class="wt-info-card"></div>
+    </section>
+
+    <section class="wt-section">
+        <div class="wt-section-heading">
+        <h2>Zooming Out: The Industry View</h2>
+        <p>How this company compares to the industry in New York.</p>
+        </div>
+        <div id="industryCard" class="wt-info-card"></div>
+    </section>
+
+    <section class="wt-section">
+        <div class="wt-section-heading">
+            <h2>Top 8 Industry Offenders</h2>
+            <p>A breakdown of total wages stolen across the highest-impact industries in New York.</p>
+        </div>
+
+        <div class="wt-chart-wrap">
+            <canvas id="industryChart"></canvas>
+        </div>
+        </section>
+
+    <section class="wt-section">
+        <div class="wt-section-heading">
+        <h2>Where Wage Theft Is Happening</h2>
+        <p>A breakdown of total wages stolen sorted by the most affected New York counties.</p>
+        </div>
+        <div class="wt-chart-wrap">
+        <canvas id="countyChart"></canvas>
+        </div>
+    </section>
+    </main>
+  </div>
+
+  <script src="./wage_theft.js"></script>
+</body>
+</html>
